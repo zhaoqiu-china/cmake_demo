@@ -56,6 +56,11 @@ add_executable(
   src/Array2D_demo.cpp
 )
 
+add_executable(
+  chrono_demo
+  src/chrono_demo.cc
+)
+
 #google test
 enable_testing()
 

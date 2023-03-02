@@ -44,7 +44,7 @@ Array2D<T>::~Array2D()
 template<typename T>
 inline T& Array2D<T>::operator()(int row, int col)
 {
-    return this->m_data[row * this->NRow, col];
+    return this->m_data[row * this->NRow + col];
 }
 
 template <typename T>

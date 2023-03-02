@@ -14,11 +14,19 @@ int main()
         
     }
     
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            std::cout << a(i, j) << std::endl;
+        }
+        
+    }
     std::cout << a(1, 1) << std::endl;
 
     const int b = a(1, 1);
     auto c = a[1];
 
-    // std::cout << c[0] << std::endl;
+    std::cout << c[0] << std::endl;
     return 0;
 }
