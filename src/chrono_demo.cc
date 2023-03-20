@@ -23,5 +23,11 @@ int main()
     std::chrono::duration<double, std::milli> duration = end - start;
     // long long int nano to long long int milli using "cast"
     std::chrono::duration_cast<std::chrono::milliseconds>(duration).count();
+
+    char * a[10];
+    a[0] = "01234";
+    a[1] = "4321";
+    auto b = a[1][0];
+
     return 0;
 }

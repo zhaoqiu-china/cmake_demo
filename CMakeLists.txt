@@ -8,17 +8,23 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 
 # GET GoogleTest
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/58d77fa8070e8cec2dc1ed015d66b454c8d78850.zip
-)
-# For Windows: Prevent overriding the parent project's compiler/linker settings
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
+# include(FetchContent)
+# FetchContent_Declare(
+#   googletest
+#   URL https://github.com/google/googletest/archive/58d77fa8070e8cec2dc1ed015d66b454c8d78850.zip
+# )
+# # For Windows: Prevent overriding the parent project's compiler/linker settings
+# set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+# FetchContent_MakeAvailable(googletest)
+
+find_package(GTest REQUIRED)
 
 # Install spdlog
-find_package(spdlog 1.11.0 CONFIG REQUIRED)
+find_package(spdlog REQUIRED)
+
+find_package(nlohmann_json REQUIRED)
+
+# find_package()
 
 add_executable(
     deleted_copy_func_demo
@@ -47,8 +53,8 @@ add_executable(
 )
 
 add_executable(
-    thread_demo
-    src/thread_demo.cc
+    std_thread_demo
+    src/std_thread_demo.cc
 )
 
 add_executable(
@@ -59,6 +65,56 @@ add_executable(
 add_executable(
   chrono_demo
   src/chrono_demo.cc
+)
+
+add_executable(
+  template_demo
+  src/template_demo.cc
+)
+
+add_executable(
+  pthread_demo
+  src/pthread_demo.cc
+)
+
+add_executable(
+  move_demo
+  src/move_demo.cc
+)
+
+add_executable(
+  nlohmann_json_demo
+  src/nlohmann_json_demo.cc
+)
+
+add_executable(
+  string_demo
+  src/string_demo.cc
+)
+
+add_executable(
+  cpp11_variable_template_args
+  src/cpp11_variable_template_args.cc
+)
+
+add_executable(
+  cpp17_demo
+  src/cpp17_demo.cc
+)
+
+add_executable(
+  cpp20_demo
+  src/cpp20_demo.cc
+)
+
+add_executable(
+  process_pool_thal
+  src/process_pool_thal.cc
+)
+
+add_executable(
+  fork_pipe_demo
+  src/fork_pipe_demo.cc
 )
 
 #google test

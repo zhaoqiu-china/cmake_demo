@@ -3,6 +3,7 @@
 #include <vector>
 
 // template<typename T, template<class> class Container> is also ok
+// template<typename T, template<typename> class Container> is ok
 template<typename T, template<class T> class Container>
 class WrapperContainer
 {
