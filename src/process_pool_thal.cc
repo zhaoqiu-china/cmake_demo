@@ -6,7 +6,7 @@ void f(int& n)
     n++;
 }
 
-template<typename F, typename List>
+template<typename F, typename List, typename Result>
 void parallel_exec(const F& f, const List& list)
 {
     for(auto l : list) {

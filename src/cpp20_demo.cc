@@ -20,13 +20,28 @@ void print(const T& tu)
     }(std::make_index_sequence<N>());
 }
 
+struct test
+{
+    int a;
+    // test(int b) {
+    //     a = b;
+    // }
+    
+};
 
 int main()
 {
     std::tuple tu(1, "zhaoqiu", "❤", "$");
     int a = -1;
-    std::cin >> a;
-    std::tuple tu2(a);
-    print(tu2);
+    // std::cin >> a;
+    // std::tuple tu2(a);
+    print(tu);
+    auto b = test();
+    test aa;
+    auto d = test{};
+    constexpr size_t a1 = 1;
+    constexpr size_t a2 = 2;
+    std::index_sequence<a1, a2> index;
+    std::cout << index.size << '\n';
     return 0;
 }

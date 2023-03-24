@@ -117,6 +117,11 @@ add_executable(
   src/fork_pipe_demo.cc
 )
 
+add_executable(
+  fold_expression
+  src/fold_expression.cc
+)
+
 #google test
 enable_testing()
 

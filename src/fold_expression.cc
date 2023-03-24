@@ -9,5 +9,6 @@ auto sum(Args ...args)
 int main()
 {
     sum(1, 2, 3, 5);
+    sum();
     return 0;
 }

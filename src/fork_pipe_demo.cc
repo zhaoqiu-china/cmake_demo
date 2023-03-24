@@ -5,6 +5,7 @@ int main()
 {
     
     int pipefd[2];
+    int pipefds[N][2];
     pipe(pipefd);
     pid_t p = fork();
     int a = 12;
