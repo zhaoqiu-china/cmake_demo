@@ -122,6 +122,11 @@ add_executable(
   src/fold_expression.cc
 )
 
+add_executable(
+  async_demo
+  src/async_demo.cc
+)
+
 #google test
 enable_testing()
 
